@@ -13,6 +13,6 @@ let b = Math.floor(Math.random() * 255);
 bgColor = document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
 console.log(bgColor);
 
-for (const childNodes of document.body.childNodes) {
-  console.log(childNodes);
+for (const i of document.body.childNodes) {
+  console.log(i);
 }
