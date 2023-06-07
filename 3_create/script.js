@@ -36,6 +36,7 @@ for (let i = 0; i < p.length; i++) {
   p[i].appendChild(newText);
 }
 
+// randomize the order of the section
 let myarticl = document.getElementById(`articl`);
 art.id = `articl`;
 for (let i = 0; i < sect.length; i++) {
