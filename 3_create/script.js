@@ -2,7 +2,7 @@
 let numerus = [`Unus`, `Duo`, `Tres`];
 
 let art = document.querySelector(`article`);
-
+art.id = `articl`;
 // sections creation
 for (const i of numerus) {
   let newSection = document.createElement(`section`);
@@ -38,7 +38,7 @@ for (let i = 0; i < p.length; i++) {
 
 // randomize the order of the section
 let myarticl = document.getElementById(`articl`);
-art.id = `articl`;
+
 for (let i = 0; i < sect.length; i++) {
   sect[i].id = i;
   let x = document.getElementById(i);
