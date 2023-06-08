@@ -207,3 +207,25 @@ document
   .addEventListener(`mouseout`, mouseOut3);
 
 // keypress //////////////////////////////////////////
+
+// randomize page color //
+
+document.body.addEventListener("keydown", (event) => {
+  if (event.isComposing || event.key === 32) {
+    return;
+  }
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  bgColor = document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+  //
+  document.createElement(`li`);
+  let newList = document.createElement(`li`);
+  let text = document.createTextNode(`Spacebar pressed, the color was changed`);
+  let ul = document.querySelector(`ul`);
+  ul.appendChild(newList);
+  ul.children[click].appendChild(text);
+  click++;
+});
+
+// delete logs //
