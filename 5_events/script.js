@@ -208,7 +208,7 @@ document
 
 // keypress //////////////////////////////////////////
 
-// randomize page color //
+// randomize page color on keypress space //
 
 document.body.addEventListener("keydown", (random) => {
   if (random.isComposing || random.key !== ` `) {
@@ -228,7 +228,7 @@ document.body.addEventListener("keydown", (random) => {
   click++;
 });
 
-// delete logs //
+// delete logs on keypress i //
 document.body.addEventListener("keydown", (del) => {
   if (del.isComposing || del.key !== `i`) {
     return;
@@ -239,5 +239,16 @@ document.body.addEventListener("keydown", (del) => {
     list[i].remove();
     i++;
     click--;
+  }
+});
+
+// delete generated square on keypress s //
+document.body.addEventListener("keydown", (del) => {
+  if (del.isComposing || del.key !== `s`) {
+    return;
+  }
+  let square = document.querySelectorAll(`.displayedsquare`);
+  for (let i = 0; i < square.length; i++) {
+    square[i].remove();
   }
 });
