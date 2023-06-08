@@ -210,8 +210,8 @@ document
 
 // randomize page color //
 
-document.body.addEventListener("keydown", (event) => {
-  if (event.isComposing || event.key === 32) {
+document.body.addEventListener("keydown", (random) => {
+  if (random.isComposing || random.key !== ` `) {
     return;
   }
   let r = Math.floor(Math.random() * 255);
@@ -229,3 +229,15 @@ document.body.addEventListener("keydown", (event) => {
 });
 
 // delete logs //
+document.body.addEventListener("keydown", (del) => {
+  if (del.isComposing || del.key !== `i`) {
+    return;
+  }
+  let list = document.querySelectorAll(`li`);
+  let i = 0;
+  while (i < list.length) {
+    list[i].remove();
+    i++;
+    click--;
+  }
+});
