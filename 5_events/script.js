@@ -49,23 +49,60 @@ color2();
 color3();
 
 // click ////////////////////////////////////////
+click = 0;
+let startTime = performance.now();
 
-// new div //
-
+// new div + list //
 const newColor1 = () => {
+  let endTime = performance.now();
+  let timeElapsed = (endTime - startTime) / 1000;
   let newColor = document.createElement(`div`);
   newColor.classList.add(`displayedsquare`, `green`);
   document.querySelector(`.displayedsquare-wrapper`).appendChild(newColor);
+  //
+  document.createElement(`li`);
+  let newList = document.createElement(`li`);
+  let text = document.createTextNode(
+    `[${timeElapsed}s] Created a new green square`
+  );
+  let ul = document.querySelector(`ul`);
+  ul.appendChild(newList);
+  ul.children[click].appendChild(text);
+  click++;
 };
 const newColor2 = () => {
+  let endTime = performance.now();
+  let timeElapsed = (endTime - startTime) / 1000;
   let newColor = document.createElement(`div`);
   newColor.classList.add(`displayedsquare`, `violet`);
   document.querySelector(`.displayedsquare-wrapper`).appendChild(newColor);
+  //
+  document.createElement(`li`);
+  let newList = document.createElement(`li`);
+  let text = document.createTextNode(
+    `[${timeElapsed}s] Created a new violet square`
+  );
+  let ul = document.querySelector(`ul`);
+  ul.appendChild(newList);
+  ul.children[click].appendChild(text);
+  click++;
 };
 const newColor3 = () => {
+  let endTime = performance.now();
+  let timeElapsed = (endTime - startTime) / 1000;
   let newColor = document.createElement(`div`);
   newColor.classList.add(`displayedsquare`, `orange`);
   document.querySelector(`.displayedsquare-wrapper`).appendChild(newColor);
+  //
+  document.createElement(`li`);
+  let newList = document.createElement(`li`);
+  let text = document.createTextNode(
+    `[${timeElapsed}s] Created a new orange square`
+  );
+  let ul = document.querySelector(`ul`);
+  ul.appendChild(newList);
+  ul.children[click].appendChild(text);
+  click++;
 };
 
 // coloring the div //
