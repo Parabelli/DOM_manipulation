@@ -252,3 +252,19 @@ document.body.addEventListener("keydown", (del) => {
     square[i].remove();
   }
 });
+
+// alert when clicked on generated square ////////////////////////////////////////
+
+/* document
+  .querySelectorAll(".displayedsquare.green")
+  .forEach((greenSquare) =>
+    greenSquare.addEventListener("click", () => alert("green"))
+  ); */
+/* let greenSquare = document.querySelectorAll(`.displayedsquare.green`);
+for (let i = 0; i < greenSquare.length; i++) {} */
+let greenSquare = document.querySelectorAll(".displayedsquare.green");
+for (let i = 0; i < greenSquare.length; i++) {
+  greenSquare[i].addEventListener("click", () => {
+    alert(`green`);
+  });
+}
