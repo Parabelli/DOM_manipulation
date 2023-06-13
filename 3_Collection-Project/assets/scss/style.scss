@@ -27,6 +27,7 @@ body {
   text-align: center;
   align-items: center;
   section {
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     text-align: initial;
@@ -73,7 +74,7 @@ body {
       height: 270px;
       border-radius: 10px;
       border: gray double 2px;
-      margin: 0 5px;
+      margin: 0 5px 5px 0;
     }
     figure {
       align-self: center;
@@ -100,7 +101,7 @@ body {
     .description {
       font-size: 0.7rem;
       overflow-y: scroll;
-      max-height: 15vh;
+      max-height: 14vh;
     }
   }
 }

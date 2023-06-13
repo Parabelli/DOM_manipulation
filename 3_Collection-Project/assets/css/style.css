@@ -30,6 +30,7 @@ body {
   align-items: center;
 }
 body section {
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   text-align: initial;
@@ -75,7 +76,7 @@ body .bookrow > div {
   height: 270px;
   border-radius: 10px;
   border: gray double 2px;
-  margin: 0 5px;
+  margin: 0 5px 5px 0;
 }
 body .bookrow figure {
   align-self: center;
@@ -102,7 +103,7 @@ body .bookrow .author {
 body .bookrow .description {
   font-size: 0.7rem;
   overflow-y: scroll;
-  max-height: 15vh;
+  max-height: 14vh;
 }
 
 /*# sourceMappingURL=style.css.map */
