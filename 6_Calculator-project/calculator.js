@@ -1,3 +1,7 @@
+function computeResult(str) {
+  return Function("return " + str)();
+}
+
 const main = document.querySelector(`main`);
 main.style.display = `flex`;
 main.style.justifyContent = `center`;
@@ -67,8 +71,7 @@ five.innerText = `5`;
 let six = document.createElement(`div`);
 six.innerText = `6`;
 let multiple = document.createElement(`div`);
-multiple.innerText = `x
-`;
+multiple.innerText = `*`;
 let row4 = document.createElement(`section`);
 let one = document.createElement(`div`);
 one.innerText = `1`;
@@ -154,16 +157,68 @@ divs.forEach((div) => {
   div.style.justifyContent = `center`;
   div.style.alignItems = `center`;
   div.style.fontSize = `1.5rem`;
-  div.addEventListener(`click`, (event) => {
+  div.addEventListener(`click`, () => {
+    /* let total = 0;
+    let first = 0;
+    let second = 0; */
     if (div.innerText === `AC`) {
-      screenzone.querySelectorAll(`#text`).forEach((i) => {
-        i.remove();
+      screenzone.childNodes.forEach((childnodes) => {
+        childnodes.remove();
+        //////////////////////////////////// Idk why i need to put so much .remove() to delete everything /////////////////////////////////////////
       });
+      if (div.innerText === `AC`) {
+        screenzone.childNodes.forEach((childnodes) => {
+          childnodes.remove();
+        });
+        if (div.innerText === `AC`) {
+          screenzone.childNodes.forEach((childnodes) => {
+            childnodes.remove();
+          });
+          if (div.innerText === `AC`) {
+            screenzone.childNodes.forEach((childnodes) => {
+              childnodes.remove();
+            });
+            if (div.innerText === `AC`) {
+              screenzone.childNodes.forEach((childnodes) => {
+                childnodes.remove();
+                if (div.innerText === `AC`) {
+                  screenzone.childNodes.forEach((childnodes) => {
+                    childnodes.remove();
+                    if (div.innerText === `AC`) {
+                      screenzone.childNodes.forEach((childnodes) => {
+                        childnodes.remove();
+                      });
+                    }
+                  });
+                }
+              });
+            }
+          }
+        }
+      }
     } else if (div.innerText == `=`) {
-      alert(`equal`);
+      /* let childs = screenzone.querySelectorAll(childNodes);
+      for (let i = 0; i < childs; i++) {
+        if ((childs[i].innerText = `+`)) {
+          for (let y = i - 1; y > 0; y--) {
+            let firststring = "";
+            firststring += childs[y];
+            first = parseFloat(firststring);
+          }
+        } else if (`-`) {
+        } else if (`*`) {
+        } else if (`/`) {
+        } else if (`%`) {
+        }
+      }
+      alert(`equal`); */
+      let operation = screenzone.innerText;
+      console.log(computeResult(operation));
+      screenzone.innerText = `\n ${computeResult(operation)}`;
     } else {
       let calcul = document.createTextNode(div.innerText);
       screenzone.append(calcul);
+      console.log(screenzone.childNodes);
     }
   });
 });
