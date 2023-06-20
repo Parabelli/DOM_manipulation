@@ -158,13 +158,9 @@ divs.forEach((div) => {
   div.style.alignItems = `center`;
   div.style.fontSize = `1.5rem`;
   div.addEventListener(`click`, () => {
-    /* let total = 0;
-    let first = 0;
-    let second = 0; */
     if (div.innerText === `AC`) {
       screenzone.childNodes.forEach((childnodes) => {
         childnodes.remove();
-        //////////////////////////////////// Idk why i need to put so much .remove() to delete everything /////////////////////////////////////////
       });
       if (div.innerText === `AC`) {
         screenzone.childNodes.forEach((childnodes) => {
@@ -197,21 +193,6 @@ divs.forEach((div) => {
         }
       }
     } else if (div.innerText == `=`) {
-      /* let childs = screenzone.querySelectorAll(childNodes);
-      for (let i = 0; i < childs; i++) {
-        if ((childs[i].innerText = `+`)) {
-          for (let y = i - 1; y > 0; y--) {
-            let firststring = "";
-            firststring += childs[y];
-            first = parseFloat(firststring);
-          }
-        } else if (`-`) {
-        } else if (`*`) {
-        } else if (`/`) {
-        } else if (`%`) {
-        }
-      }
-      alert(`equal`); */
       let operation = screenzone.innerText;
       console.log(computeResult(operation));
       screenzone.innerText = `\n ${computeResult(operation)}`;
